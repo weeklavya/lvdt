@@ -25,9 +25,17 @@ void draw_BoxNButtons()
   tft.print("Start");
 
  
-  tft.setCursor(32, 70);
+  tft.setCursor(32, 20);
    tft.setTextColor(BLACK);
-  tft.print("ANOLOG VALUE");
+  tft.print(TestNO);
+
+   tft.setCursor(32, 70);
+   tft.setTextColor(BLACK);
+  tft.print("error : ");
+
+    tft.setCursor(162, 70);
+   tft.setTextColor(BLACK);
+  tft.print(error);
 
  tft.fillRect(10, 260, 50, 40, RED);
   tft.setTextColor(WHITE);

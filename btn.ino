@@ -18,33 +18,25 @@ void DetectButtons()
     tft.setTextSize (2);
     tft.setTextColor(BLACK);
     tft.println("START");
+    startflag=1;
   }
 
   if (p.x > 50 && p.x < 70 && p.y > 180 && p.y < 270)
   {
     tft.setCursor (50, 100);
-    tft.fillScreen(WHITE);
-    tft.setTextSize (2);
-    tft.setTextColor(BLACK);
-    tft.println("Button One");
+    TestNO="Test One";
   }
 
     if (p.x > 110 && p.x < 170 && p.y > 200 && p.y < 250)
   {
     tft.setCursor (50, 100);
-    tft.fillScreen(WHITE);
-    tft.setTextSize (2);
-    tft.setTextColor(BLACK);
-    tft.println("Button TWO");
+    TestNO="Test Two";
   }
 
       if (p.x > 250 && p.x < 300 && p.y > 200 && p.y < 250)
   {
     tft.setCursor (50, 100);
-    tft.fillScreen(WHITE);
-    tft.setTextSize (2);
-    tft.setTextColor(BLACK);
-    tft.println("Button THree");
+    TestNO="Test Three";
   }
   Serial.print(p.x);
 

@@ -43,8 +43,9 @@ long Num1, Num2, Number;
 char action;
 boolean result = false;
 
-
-
+int startflag=0;
+int val=0;
+int error=0;
 //// Assign human-readable names to some common 16-bit color values:
 #define  BLACK   0x0000
 #define BLUE    0xF800
@@ -55,7 +56,7 @@ boolean result = false;
 #define YELLOW  0xFFE0
 #define WHITE   0xFFFF
 
-
+String TestNO="No Test Selected";
 
 #define BOXSIZE 60
 
@@ -82,8 +83,27 @@ void loop() {
  
   delay(300);
    draw_BoxNButtons();
-}
 
+   if(startflag==1 && TestNO=="Test One" )
+   {
+    error=1000-val;
+   }
+
+    if(startflag==1 && TestNO=="Test Two" )
+   {
+    error=500-val;
+   }
+
+    if(startflag==1 && TestNO=="Test Three" )
+   {
+    error=200-val;
+   }
+   else
+   {
+    error=0;
+    }
+}
+//
 //TSPoint waitTouch() {
 //  TSPoint p;
 //  do {
@@ -95,7 +115,7 @@ void loop() {
 //  p.y = map(p.y, TS_MINY, TS_MAXY, 0, 240);;
 //  return p;
 //}
- 
+// 
 
 void CalculateResult()
 {
